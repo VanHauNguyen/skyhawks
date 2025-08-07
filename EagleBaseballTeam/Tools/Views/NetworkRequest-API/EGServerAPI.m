@@ -19,7 +19,8 @@
 //雄鹰 中继
 #define SERVERXiongYing_URL  @"https://tsg-hawks-akaqhvfyb7euhdh7.a03.azurefd.net" /*@"https://www.tsghawks.com"*/
 //中继
-#define NewSfotAPI @"https://relay.tsghawks.com:8765"
+#define NewSfotAPI @"http://20.189.240.127:8765"
+// @"https://relay.tsghawks.com:8765"
 // @"http://relay2.tsghawks.com:8765"
 
 #else
@@ -37,6 +38,7 @@
 
 
 #define SERVERXiongYing @"https://www.tsghawks.com"
+//#define SERVERXiongYing @"https://www.tsghawks.com"
 
 
 @implementation EGServerAPI

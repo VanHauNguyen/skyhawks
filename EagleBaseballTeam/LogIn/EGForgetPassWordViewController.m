@@ -51,7 +51,7 @@
     [sureBtn setTitle:@"確定" forState:UIControlStateNormal];
     [sureBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
     [sureBtn setTitleColor:rgba(163, 163, 163, 1) forState:UIControlStateDisabled];
-    sureBtn.backgroundColor = rgba(0, 78, 162, 1);
+    sureBtn.backgroundColor = rgba(0, 121, 192, 1);
     [sureBtn addTarget:self action:@selector(bottomButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     sureBtn.titleEdgeInsets = UIEdgeInsetsMake(-ScaleW(25), 0, 0, 0); // 文字往上偏移 10 點
     [sureBtn sizeToFit];
@@ -63,7 +63,7 @@
         make.left.mas_equalTo(0);
     }];
     [sureBtn setBackgroundImage:[UIImage imageWithColor:rgba(243, 243, 243, 1)] forState:UIControlStateDisabled];
-    [sureBtn setBackgroundImage:[UIImage imageWithColor:rgba(0, 122, 96, 1)] forState:UIControlStateNormal];
+    [sureBtn setBackgroundImage:[UIImage imageWithColor:rgba(0, 121, 192, 1)] forState:UIControlStateNormal];
     self.sureBtn = sureBtn;
     self.sureBtn.enabled = false;
 }

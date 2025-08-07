@@ -154,7 +154,7 @@
     UILabel *weComeLB = [UILabel new];
     weComeLB.text = @"歡迎登入";
     weComeLB.textAlignment = NSTextAlignmentCenter;
-    weComeLB.textColor = rgba(0, 78, 162, 1);
+    weComeLB.textColor = rgba(16, 38, 73, 1);
     weComeLB.font = [UIFont boldSystemFontOfSize:FontSize(18)];
     [bottomView addSubview:weComeLB];
     [weComeLB mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -312,7 +312,7 @@
     [logInBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
     [logInBtn setTitleColor:rgba(163, 163, 163, 1) forState:UIControlStateDisabled];
     [logInBtn setBackgroundImage:[UIImage imageWithColor:rgba(243, 243, 243, 1)] forState:UIControlStateDisabled];
-    [logInBtn setBackgroundImage:[UIImage imageWithColor:rgba(16, 38, 73, 1)] forState:UIControlStateNormal];
+    [logInBtn setBackgroundImage:[UIImage imageWithColor:rgba(0, 121, 192, 1)] forState:UIControlStateNormal];
     [bottomView addSubview:logInBtn];
     
     if ([[dict allKeys] containsObject:@"pswd"] && [[dict allKeys] containsObject:@"account"])

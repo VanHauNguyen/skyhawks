@@ -34,7 +34,7 @@
 //    [leftBtn setTitle:NSLocalizedString(@"票匣", nil) forState:(UIControlStateNormal)];
 //    [leftBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
 //    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
-//    [self setupUI];
+    [self setupUI];
     
     self.tabBarController.delegate = self;
     
@@ -42,7 +42,7 @@
 //    NSString *message = @"即將開啟 台鋼雄鷹 FamiTicket";
 //    [ELAlertController alertControllerWithTitleName:@"票匣" andMessage:message cancelButtonTitle:@"取消" confirmButtonTitle:@"確定開啟" showViewController:self addCancelClickBlock:^(UIAlertAction * _Nonnull cancelAction) {
 //
-//        } addConfirmClickBlock:^(UIAlertAction * _Nonnull SureAction) {
+//        } addConfirmClickBlock:^(UIAlertAction * _Nonnull SureAct ion) {
 //            [self buyTickets];
 //        }];
 //    UIWindow *window = [[[UIApplication sharedApplication] windows] firstObject];
@@ -53,38 +53,44 @@
 
 -(void)setupUI
 {
-    UIView *bView = [[UIView alloc] initWithFrame:CGRectMake(0, [UIDevice de_navigationFullHeight], Device_Width, Device_Height)];
-    bView.backgroundColor = rgba(245, 245, 245, 1);
-    [self.view addSubview:bView];
-    self.baseView = bView;
-
-
-    self.imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, [UIDevice de_navigationFullHeight], 160, 160)];
-    self.imgView.contentMode = UIViewContentModeScaleAspectFit;
-    self.imgView.image =// [UIImage imageNamed:@"sendok"];
-    self.imgView.image =  [UIImage imageNamed:@"dialogTAKAO2"];
-    
-    [self.baseView addSubview:self.imgView];
-    [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(ScaleW(100));
-        make.left.mas_equalTo(self.baseView.mas_centerX).offset(-120);
-        make.height.mas_equalTo(ScaleW(160));
-        make.width.mas_equalTo(Device_Width-ScaleW(160));
-    }];
-    
-    self.byticks = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 32, 32)];
-    self.byticks.backgroundColor = rgba(0, 122, 96, 1);
-    [self.byticks addTarget:self action:@selector(buyTickets) forControlEvents:UIControlEventTouchUpInside];
-    self.byticks.titleLabel.font = [UIFont boldSystemFontOfSize:FontSize(18)];
-    [self.byticks setTitle:@"前往購票" forState:UIControlStateNormal];
-    [self.byticks setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-    [self.baseView addSubview:self.byticks];
-    [self.byticks mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.imgView.mas_bottom).offset(FontSize(30));
-        make.left.mas_equalTo(self.baseView.mas_centerX).offset(-120);
-        make.height.mas_equalTo(ScaleW(45));
-        make.width.mas_equalTo(Device_Width-ScaleW(160));
-    }];
+    EGPublicWebViewController *webVc = [[EGPublicWebViewController alloc] init];
+            webVc.webUrl = @"https://ticket-tsgskyhawks.tsgb2c.net";
+        [self addChildViewController:webVc];
+            webVc.view.frame = self.view.bounds;
+        [self.view addSubview:webVc.view];
+            [webVc didMoveToParentViewController:self];
+//    UIView *bView = [[UIView alloc] initWithFrame:CGRectMake(0, [UIDevice de_navigationFullHeight], Device_Width, Device_Height)];
+//    bView.backgroundColor = rgba(245, 245, 245, 1);
+//    [self.view addSubview:bView];
+//    self.baseView = bView;
+//
+//
+//    self.imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, [UIDevice de_navigationFullHeight], 160, 160)];
+//    self.imgView.contentMode = UIViewContentModeScaleAspectFit;
+//    self.imgView.image =// [UIImage imageNamed:@"sendok"];
+//    self.imgView.image =  [UIImage imageNamed:@"dialogTAKAO2"];
+//    
+//    [self.baseView addSubview:self.imgView];
+//    [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(ScaleW(100));
+//        make.left.mas_equalTo(self.baseView.mas_centerX).offset(-120);
+//        make.height.mas_equalTo(ScaleW(160));
+//        make.width.mas_equalTo(Device_Width-ScaleW(160));
+//    }];
+//    
+//    self.byticks = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 32, 32)];
+//    self.byticks.backgroundColor = rgba(0, 122, 96, 1);
+//    [self.byticks addTarget:self action:@selector(buyTickets) forControlEvents:UIControlEventTouchUpInside];
+//    self.byticks.titleLabel.font = [UIFont boldSystemFontOfSize:FontSize(18)];
+//    [self.byticks setTitle:@"前往購票" forState:UIControlStateNormal];
+//    [self.byticks setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+//    [self.baseView addSubview:self.byticks];
+//    [self.byticks mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self.imgView.mas_bottom).offset(FontSize(30));
+//        make.left.mas_equalTo(self.baseView.mas_centerX).offset(-120);
+//        make.height.mas_equalTo(ScaleW(45));
+//        make.width.mas_equalTo(Device_Width-ScaleW(160));
+//    }];
     
 }
 

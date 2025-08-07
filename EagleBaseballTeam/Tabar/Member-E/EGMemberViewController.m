@@ -633,7 +633,7 @@
             if (![EGLoginUserManager isLogIn]) {
                 EGNavigationController *nav = [[EGNavigationController alloc] initWithRootViewController:[EGLogInViewController new]];
                 nav.modalPresentationStyle = UIModalPresentationFullScreen;
-                nav.navigationBar.backgroundColor = rgba(0, 71, 56, 1);
+                nav.navigationBar.backgroundColor = rgba(16, 38, 73, 1);
                 [self presentViewController:nav animated:true completion:^{
                 }];
                 return;
@@ -645,7 +645,7 @@
             if (![EGLoginUserManager isLogIn]) {
                 EGNavigationController *nav = [[EGNavigationController alloc] initWithRootViewController:[EGLogInViewController new]];
                 nav.modalPresentationStyle = UIModalPresentationFullScreen;
-                nav.navigationBar.backgroundColor = rgba(0, 71, 56, 1);
+                nav.navigationBar.backgroundColor = rgba(16, 38, 73, 1);
                 [self presentViewController:nav animated:true completion:^{
                 }];
                 return;
@@ -724,7 +724,7 @@
         
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, ScaleW(30), 200, ScaleW(14))];
         titleLabel.text = self.sections[section][@"title"];
-        titleLabel.textColor = rgba(0, 122, 96, 1);
+        titleLabel.textColor = rgba(0, 78, 162, 1);
         titleLabel.font = [UIFont systemFontOfSize:FontSize(14) weight:UIFontWeightSemibold];
         [headerView addSubview:titleLabel];
         
@@ -814,7 +814,7 @@
                     EGLogInViewController *login = [EGLogInViewController new];
                     EGNavigationController *nav = [[EGNavigationController alloc] initWithRootViewController:login];
                     nav.modalPresentationStyle = UIModalPresentationFullScreen;
-                    nav.navigationBar.backgroundColor = rgba(0, 71, 56, 1);
+                    nav.navigationBar.backgroundColor = rgba(16, 38, 73, 1);
                     login.logInBlock = ^{
                         [weakSelf setupData];
                     };
@@ -896,7 +896,7 @@
                     EGLogInViewController *login = [EGLogInViewController new];
                     EGNavigationController *nav = [[EGNavigationController alloc] initWithRootViewController:login];
                     nav.modalPresentationStyle = UIModalPresentationFullScreen;
-                    nav.navigationBar.backgroundColor = rgba(0, 71, 56, 1);
+                    nav.navigationBar.backgroundColor = rgba(16, 38, 73, 1);
                     login.logInBlock = ^{
                         [weakSelf setupData];
                     };
@@ -915,7 +915,7 @@
                     EGLogInViewController *login = [EGLogInViewController new];
                     EGNavigationController *nav = [[EGNavigationController alloc] initWithRootViewController:login];
                     nav.modalPresentationStyle = UIModalPresentationFullScreen;
-                    nav.navigationBar.backgroundColor = rgba(0, 71, 56, 1);
+                    nav.navigationBar.backgroundColor = rgba(16, 38,73, 1);
                     login.logInBlock = ^{
                         [weakSelf setupData];
                     };
@@ -948,7 +948,7 @@
                 EGLogInViewController *login = [EGLogInViewController new];
                 EGNavigationController *nav = [[EGNavigationController alloc] initWithRootViewController:login];
                 nav.modalPresentationStyle = UIModalPresentationFullScreen;
-                nav.navigationBar.backgroundColor = rgba(0, 71, 56, 1);
+                nav.navigationBar.backgroundColor = rgba(16, 38, 73, 1);
                 login.logInBlock = ^{
                     [weakSelf setupData];
                 };
@@ -1171,7 +1171,7 @@
         EGLogInViewController *login = [EGLogInViewController new];
         EGNavigationController *nav = [[EGNavigationController alloc] initWithRootViewController:login];
         nav.modalPresentationStyle = UIModalPresentationFullScreen;
-        nav.navigationBar.backgroundColor = rgba(0, 71, 56, 1);
+        nav.navigationBar.backgroundColor = rgba(16, 38, 73, 1);
         login.logInBlock = ^{
             [weakSelf setupData];
         };
@@ -1270,7 +1270,7 @@
         EGLogInViewController *login = [EGLogInViewController new];
         EGNavigationController *nav = [[EGNavigationController alloc] initWithRootViewController:login];
         nav.modalPresentationStyle = UIModalPresentationFullScreen;
-        nav.navigationBar.backgroundColor = rgba(0, 71, 56, 1);
+        nav.navigationBar.backgroundColor = rgba(16, 38, 73, 1);
         login.logInBlock = ^{
             [weakSelf setupData];
         };
@@ -1289,7 +1289,7 @@
         EGLogInViewController *login = [EGLogInViewController new];
         EGNavigationController *nav = [[EGNavigationController alloc] initWithRootViewController:login];
         nav.modalPresentationStyle = UIModalPresentationFullScreen;
-        nav.navigationBar.backgroundColor = rgba(0, 71, 56, 1);
+        nav.navigationBar.backgroundColor = rgba(16, 38, 73, 1);
         login.logInBlock = ^{
             [weakSelf setupData];
         };
@@ -1310,7 +1310,7 @@
         EGLogInViewController *login = [EGLogInViewController new];
         EGNavigationController *nav = [[EGNavigationController alloc] initWithRootViewController:login];
         nav.modalPresentationStyle = UIModalPresentationFullScreen;
-        nav.navigationBar.backgroundColor = rgba(0, 71, 56, 1);
+        nav.navigationBar.backgroundColor = rgba(16, 38, 73, 1);
         login.logInBlock = ^{
             [weakSelf setupData];
         };

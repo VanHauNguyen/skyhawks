@@ -69,7 +69,7 @@
     if (scrollView == self.baseScrollView) {
         if (scrollView.contentOffset.y < 0) {
             // 下拉时显示绿色背景
-            self.baseScrollView.backgroundColor = rgba(16, 38, 73, 1);
+            self.baseScrollView.backgroundColor = rgba(0, 78, 162, 1);
         } else {
             // 上滑时显示灰色背景
             self.baseScrollView.backgroundColor = rgba(243, 243, 243, 1);

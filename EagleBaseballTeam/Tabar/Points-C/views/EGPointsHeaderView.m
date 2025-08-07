@@ -155,7 +155,7 @@
         gradientLayer.startPoint = CGPointMake(0, 0);
         gradientLayer.endPoint = CGPointMake(0, 1);
         gradientLayer.frame = topView.bounds;
-        gradientLayer.colors = @[(id)rgba(16, 38, 73, 1).CGColor,(id)rgba(0, 121,192, 1).CGColor];
+        gradientLayer.colors = @[(id)rgba(0, 78, 162, 1).CGColor,(id)rgba(0, 121,192, 1).CGColor];
         [topView.layer insertSublayer:gradientLayer atIndex:0];
         //220-157
         [self.bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {

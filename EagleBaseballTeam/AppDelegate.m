@@ -49,13 +49,19 @@
     if (@available(iOS 15.0, *)) {
         UINavigationBarAppearance *navBarAppearance = [[UINavigationBarAppearance alloc] init];
         [navBarAppearance configureWithOpaqueBackground];
-        navBarAppearance.backgroundColor = rgba(16, 38, 73, 1);
+        
+        // 使用渐变背景替换单色背景
+        CGSize size = CGSizeMake([UIScreen mainScreen].bounds.size.width, 88);
+        UIImage *gradientImage = [self gradientImageWithSize:size
+                                                  startColor:[UIColor colorWithRed:16/255.0 green:38/255.0 blue:73/255.0 alpha:1]
+                                                    endColor:[UIColor colorWithRed:0/255.0 green:78/255.0 blue:162/255.0 alpha:1]];
+        navBarAppearance.backgroundImage = gradientImage;
         
         // 设置分隔线颜色与背景色一致
         navBarAppearance.shadowColor = rgba(16, 38, 73, 1);
         // 或者直接移除分隔线
-        // navBarAppearance.shadowImage = [[UIImage alloc] init];
-        // navBarAppearance.shadowColor = nil;
+         navBarAppearance.shadowImage = [[UIImage alloc] init];
+         navBarAppearance.shadowColor = nil;
         
         navBarAppearance.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
         [UINavigationBar appearance].standardAppearance = navBarAppearance;
@@ -74,7 +80,30 @@
     return YES;
 }
 
+// 辅助方法: 创建渐变图片
+- (UIImage *)gradientImageWithSize:(CGSize)size startColor:(UIColor *)startColor endColor:(UIColor *)endColor {
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    NSArray *colors = @[(__bridge id)startColor.CGColor, (__bridge id)endColor.CGColor];
+    CGFloat locations[] = {0.0, 1.0};
+    
+    CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)colors, locations);
+    CGPoint startPoint = CGPointMake(0, 0);
+    CGPoint endPoint = CGPointMake(0, size.height); // 垂直渐变（上到下）
 
+    
+    CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, 0);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    CGGradientRelease(gradient);
+    CGColorSpaceRelease(colorSpace);
+    
+    return image;
+}
 
 
 - (void)configureNotification:(UIApplication *)application {

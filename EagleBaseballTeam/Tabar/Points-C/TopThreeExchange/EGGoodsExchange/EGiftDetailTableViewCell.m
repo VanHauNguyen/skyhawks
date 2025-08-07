@@ -153,7 +153,7 @@
         self.title.textAlignment = NSTextAlignmentCenter;
         self.title.text = @"特別優惠";
         self.title.numberOfLines = 0;
-        self.title.textColor = rgba(0, 122, 96, 1);
+        self.title.textColor = rgba(0, 78, 162, 1);
         self.title.font = [UIFont systemFontOfSize:FontSize(14) weight:UIFontWeightSemibold];
         [baseView addSubview:self.title];
         [self.title mas_makeConstraints:^(MASConstraintMaker *make) {

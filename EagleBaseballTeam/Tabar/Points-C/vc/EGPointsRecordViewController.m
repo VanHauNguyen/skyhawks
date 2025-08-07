@@ -74,7 +74,7 @@
         
         UILabel *titleLb = [UILabel new];
         titleLb.text = @"當月生日禮";
-        titleLb.textColor = rgba(0, 122, 96, 1);
+        titleLb.textColor = rgba(0, 78, 162, 1);
         titleLb.font = [UIFont systemFontOfSize:FontSize(14) weight:UIFontWeightSemibold];
         titleLb.numberOfLines = 0;
         [baseView addSubview:titleLb];
@@ -223,7 +223,7 @@
     gradientLayer.startPoint = CGPointMake(0, 0);
     gradientLayer.endPoint = CGPointMake(0, 1);
     gradientLayer.frame = greenView.bounds;
-    gradientLayer.colors = @[(id)rgba(0, 71, 56, 1).CGColor,(id)rgba(0, 122, 96, 1).CGColor];
+    gradientLayer.colors = @[(id)rgba(0, 78, 162, 1).CGColor,(id)rgba(0, 121, 192, 1).CGColor];
     [greenView.layer insertSublayer:gradientLayer atIndex:0];
     
     
@@ -305,7 +305,7 @@
     }];
     
     UIView *line = [UIView new];
-    line.backgroundColor = rgba(0, 122, 96, 1);
+    line.backgroundColor = rgba(0, 78, 162, 1);
     [header addSubview:line];
     [line mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(0);

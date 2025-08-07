@@ -90,7 +90,7 @@
             typeBtn.layer.masksToBounds = true;
             [typeBtn setTitle:titles[i] forState:UIControlStateNormal];
             [typeBtn setImage:[UIImage imageWithColor:rgba(212, 212, 212, 1)] forState:UIControlStateNormal];
-            [typeBtn setImage:[UIImage imageWithColor:rgba(0, 78, 162, 1)] forState:UIControlStateSelected];
+            [typeBtn setImage:[UIImage imageWithColor:rgba(0, 121, 192, 1)] forState:UIControlStateSelected];
             [typeBtn setTitleColor:rgba(0, 0, 0, 1) forState:UIControlStateNormal];
             [typeBtn setTitleColor:rgba(255, 255, 255, 1) forState:UIControlStateSelected];
             [typeBtn addTarget:self action:@selector(typeButtonAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -102,7 +102,7 @@
                     make.left.mas_equalTo(ScaleW(20));
                     make.width.mas_equalTo(ScaleW(64));
                     typeBtn.selected = YES;
-                    typeBtn.backgroundColor = rgba(0, 78, 162, 1);
+                    typeBtn.backgroundColor = rgba(0, 121, 192, 1);
                 }else if (i == 1){
                     make.left.mas_equalTo(ScaleW(104));
                     make.width.mas_equalTo(ScaleW(64));

@@ -162,7 +162,7 @@
         self.openCode.titleLabel.font = [UIFont systemFontOfSize:FontSize(16) weight:UIFontWeightSemibold];
         [self.openCode setTitle:@" 開啟條碼" forState:UIControlStateNormal];
         [self.openCode setImage:[UIImage imageNamed:@"ScanCodeG"] forState:UIControlStateNormal];
-        [self.openCode setTitleColor:rgba(0, 122, 96, 1) forState:UIControlStateNormal];
+        [self.openCode setTitleColor:rgba(0, 78, 162, 1) forState:UIControlStateNormal];
         [self.openCode addTarget:self action:@selector(openQRCodeAction) forControlEvents:UIControlEventTouchUpInside];
         [baseView addSubview:self.openCode];
         [self.openCode mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -221,7 +221,7 @@
             self.openCode.backgroundColor = [UIColor clearColor];
             [self.openCode setImage:[UIImage imageNamed:@"ScanCodeG"] forState:UIControlStateNormal];
             self.openCode.enabled = YES;
-            [self.openCode setTitleColor:rgba(0, 122, 96, 1) forState:UIControlStateNormal];
+            [self.openCode setTitleColor:rgba(0, 78, 162, 1) forState:UIControlStateNormal];
         }
         else{
             //[self.openCode setImage:[UIImage imageNamed:@"QR_Code"] forState:UIControlStateNormal];

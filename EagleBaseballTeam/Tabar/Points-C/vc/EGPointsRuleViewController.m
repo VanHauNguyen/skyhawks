@@ -127,7 +127,7 @@
     UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.text = title;
     titleLabel.font = [UIFont systemFontOfSize:FontSize(16) weight:UIFontWeightSemibold];
-    titleLabel.textColor = rgba(0, 122, 96, 1);
+    titleLabel.textColor = rgba(0, 78, 162, 1);
     [containerView addSubview:titleLabel];
 //    titleLabel.backgroundColor = [UIColor redColor];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {

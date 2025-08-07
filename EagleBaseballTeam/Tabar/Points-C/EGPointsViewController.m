@@ -214,8 +214,8 @@
     gradientLayer.frame = self.view.bounds;
     // 定义渐变色（示例：从蓝色到绿色）
     gradientLayer.colors = @[
-        (__bridge id)rgba(16, 38, 73, 1).CGColor,
-        (__bridge id)rgba(16, 38, 73, 1).CGColor,
+        (__bridge id)rgba(0, 78, 162, 1).CGColor,
+        (__bridge id)rgba(0, 78, 162, 1).CGColor,
         //           (id)rgba(0, 122, 96, 1).CGColor,
         (__bridge id)rgba(243, 243, 243, 1).CGColor
     ];
@@ -805,7 +805,7 @@
         EGLogInViewController *login = [EGLogInViewController new];
         EGNavigationController *nav = [[EGNavigationController alloc] initWithRootViewController:login];
         nav.modalPresentationStyle = UIModalPresentationFullScreen;
-        nav.navigationBar.backgroundColor = rgba(0, 71, 56, 1);
+        nav.navigationBar.backgroundColor = rgba(16, 38, 73, 1);
         login.logInBlock = ^{
             [weakSelf setNavigationItem];
         };
@@ -942,7 +942,7 @@
 {
     EGNavigationController *nav = [[EGNavigationController alloc] initWithRootViewController:[EGLogInViewController new]];
     nav.modalPresentationStyle = UIModalPresentationFullScreen;
-    nav.navigationBar.backgroundColor = rgba(0, 71, 56, 1);
+    nav.navigationBar.backgroundColor = rgba(16, 38, 73, 1);
     [self presentViewController:nav animated:true completion:^{
     }];
 }
@@ -979,7 +979,7 @@
         self.backTopBtn.layer.masksToBounds = true;
         self.backTopBtn.backgroundColor = UIColor.whiteColor;
         [self.backTopBtn setTitle:@"一" forState:UIControlStateNormal];
-        [self.backTopBtn setTitleColor:rgba(0, 122, 96, 1) forState:UIControlStateNormal];
+        [self.backTopBtn setTitleColor:rgba(0, 78, 162, 1) forState:UIControlStateNormal];
         [self.backTopBtn setImage:[UIImage imageNamed:@"paomadengback"] forState:UIControlStateNormal];
         [self.view addSubview:self.backTopBtn];
         [self.backTopBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -1130,7 +1130,7 @@
         headerView.backgroundColor = UIColor.clearColor;
         UIButton *lookAllBtn = [[UIButton alloc] init];
         [lookAllBtn setTitle:@"查看全部" forState:UIControlStateNormal];
-        [lookAllBtn setTitleColor:rgba(10, 63, 145, 1) forState:UIControlStateNormal];
+        [lookAllBtn setTitleColor:rgba(16, 38, 73, 1) forState:UIControlStateNormal];
         [lookAllBtn addTarget:self action:@selector(lookAllData) forControlEvents:UIControlEventTouchUpInside];
         [headerView addSubview:lookAllBtn];
         [lookAllBtn mas_makeConstraints:^(MASConstraintMaker *make) {

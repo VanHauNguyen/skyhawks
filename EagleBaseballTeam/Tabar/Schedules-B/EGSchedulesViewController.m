@@ -902,17 +902,19 @@ NSString *retureHomeTeamIconImgName(NSString *homeTeamCode)
         
     }else if (tag == 12) {//购票
         
-        NSString *message = @"即將開啟 台鋼雄鷹 FamiTicket";
-        [ELAlertController alertControllerWithTitleName:@"票匣" andMessage:message cancelButtonTitle:@"取消" confirmButtonTitle:@"確定開啟" showViewController:self addCancelClickBlock:^(UIAlertAction * _Nonnull cancelAction) {
-                
-            } addConfirmClickBlock:^(UIAlertAction * _Nonnull SureAction) {
-                [self buyTickets];
-            }];
-        
+//        NSString *message = @"即將開啟 台鋼雄鷹 FamiTicket";
+//        [ELAlertController alertControllerWithTitleName:@"票匣" andMessage:message cancelButtonTitle:@"取消" confirmButtonTitle:@"確定開啟" showViewController:self addCancelClickBlock:^(UIAlertAction * _Nonnull cancelAction) {
+//                
+//            } addConfirmClickBlock:^(UIAlertAction * _Nonnull SureAction) {
+//                [self buyTickets];
+//            }];
+        EGPublicWebViewController *webVc = [[EGPublicWebViewController alloc] init];
+            webVc.webUrl = @"https://ticket-tsgskyhawks.tsgb2c.net/";
+        [self.navigationController pushViewController:webVc animated:true];
         
     }else if (tag == 13) {
         
-        NSString *shopUrl = [NSString stringWithFormat:@"https://www.cpbl.com.tw/box?year=%@&kindCode=%@&gameSno=%ld",self.yearString,model.KindCode,model.GameSno];
+        NSString *shopUrl = [NSString stringWithFormat:@"https://20.189.240.127/box?year=%@&kindCode=%@&gameSno=%ld",self.yearString,model.KindCode,model.GameSno];
         SFSafariViewController *safariVC = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:shopUrl]];
         safariVC.delegate = self;
         [self presentViewController:safariVC animated:YES completion:nil];
